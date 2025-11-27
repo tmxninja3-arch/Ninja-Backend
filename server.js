@@ -9,9 +9,16 @@ connectDB();
 const app = express();
 
 // Middleware
+
+
+const allowedOrigins = [
+  'https://ninja-frontend-eta.vercel.app', // your deployed frontend
+  // add other allowed origins as needed
+];
+
 app.use(cors({
-  origin: '*',
-  credentials: true,
+  origin: allowedOrigins,
+  credentials: true, // if using cookies/authentication
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
