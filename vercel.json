@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "gamestore-api",
   "builds": [
     {
       "src": "server.js",
@@ -10,11 +9,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/server.js",
-      "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"]
+      "dest": "/server.js"
     }
-  ],
-  "env": {
-    "NODE_ENV": "production"
-  }
+  ]
 }
