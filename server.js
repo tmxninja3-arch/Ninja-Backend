@@ -9,16 +9,9 @@ connectDB();
 const app = express();
 
 // Middleware
-
-
-const allowedOrigins = [
-  'https://ninja-frontend-eta.vercel.app', // your deployed frontend
-  // add other allowed origins as needed
-];
-
 app.use(cors({
-  origin: allowedOrigins,
-  credentials: true, // if using cookies/authentication
+  origin: '*',
+  credentials: true,
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -27,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/games', require('./routes/games'));
 app.use('/api/orders', require('./routes/orders'));
-app.use('/api/upload', require('./routes/upload')); // ✅ Make sure this exists
+app.use('/api/upload', require('./routes/upload')); 
 
 // Test route
 app.get('/', (req, res) => {
