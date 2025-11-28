@@ -9,7 +9,11 @@
     "data:import": "node utils/seed.js",
     "data:destroy": "node utils/seed.js -d"
   },
-  "keywords": ["gamestore", "api", "mern"],
+  "keywords": [
+    "gamestore",
+    "api",
+    "mern"
+  ],
   "author": "Your Name",
   "license": "ISC",
   "engines": {
